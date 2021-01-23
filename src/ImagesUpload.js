@@ -26,7 +26,7 @@ class ImagesUpload extends Component {
         let file = this.state.files[0]
         let storageRef = firebase.storage().ref(`${bucketName}/${file.name}`)
         let uploadTask = storageRef.put(file)
-        uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
+        uploadTask.on(firebase.storage.TaskEvent,
            () => {
                let downloadURL = uploadTask.snapshot.downloadURL
            })
