@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import firebase from './firebase'
-
-
-
+import firebase from '../firebase'
 
 
 class ImagesUpload extends Component {
@@ -11,8 +8,6 @@ class ImagesUpload extends Component {
         this.state={
             files: null
         }
-
-
     }
 
     handleChange = (files) => {
@@ -42,8 +37,16 @@ class ImagesUpload extends Component {
     }
     render() { 
         return ( 
-
             <>
+            {/* <form onSubmit={this.handleSave}>
+                <input type="file" onChange={(e) => {this.handleChange(e.target.files)}}/>
+                <input type="text" onChange={(e) => {this.handleChange(e.target.files)}}/>
+                <button>save</button>
+                <button onClick={this.showImage}>show image</button>
+            </form>
+            <img id="new-img"/> */}
+
+
             <input type="file" onChange={(e) => {this.handleChange(e.target.files)}}/>
             <button onClick={this.handleSave}>save</button>
             <button onClick={this.showImage}>show image</button>
